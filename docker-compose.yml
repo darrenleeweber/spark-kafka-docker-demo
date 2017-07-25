@@ -1,16 +1,19 @@
+# https://spark.apache.org/docs/latest/streaming-kafka-integration.html
+
 kafka:
-  image: antlypls/kafka:0.10.0.1
+  image: spotify/kafka
   environment:
     - KAFKA=localhost:9092
     - ZOOKEEPER=localhost:2181
+    - PATH=${PATH}:/opt/kafka_2.11-0.10.1.0/bin
   expose:
     - "2181"
     - "9092"
 
 spark:
-  image: antlypls/spark:1.6.2
+  image: p7hb/docker-spark:2.2.0
   command: bash
   volumes:
-    - ./target/scala-2.10:/app
+    - ./target/scala-2.11:/app
   links:
    - kafka
