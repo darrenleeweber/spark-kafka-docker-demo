@@ -7,6 +7,9 @@ using Docker and Docker Compose.
 For more details see
 http://blog.antlypls.com/blog/2015/10/05/getting-started-with-spark-streaming-using-docker/
 
+Related projects:
+- https://github.com/simplesteph/kafka-stack-docker-compose
+
 ## Adaptations to the blog post
 
 - Updated Kafka/Spark versions
